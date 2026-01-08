@@ -37,6 +37,11 @@ public class CustomerController {
         return new ResponseEntity<>(customer, HttpStatus.CREATED);
     }
 
+    @GetMapping("/hello")
+    public String getHello() {
+       return "hello world";
+    }
+
     // PUT: Update an existing customer
     @PutMapping("/{id}")
     public ResponseEntity<Customer> updateCustomer(@PathVariable String id, @RequestBody Customer customer) {
